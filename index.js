@@ -1,6 +1,6 @@
 let express = require("express"),
     request = require("request"),
-    externalip = require("externalip");
+    externalip = require("external-ip");
 bodyparser = require("body-parser");
 
 let app = express();
