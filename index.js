@@ -16,13 +16,13 @@ app.get("/", function(req, res) {
         try {
             let location = ip;
             console.log(location);
-            let location_url = "http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=VrE0nYTPMGbpW5JBj358TJxrsUlSOScr&q=" + location + "&language=en-us&details=false"
+            let location_url = "http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=fY8ASBhh2A5Ycio8dBbi2XOMao4Ep211&q=" + location + "&language=en-us&details=false"
             request(location_url, function(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     let random_playlist = Math.floor(Math.random() * 4) + 1;
                     let location_key = JSON.parse(body).Key;
                     let location_name = JSON.parse(body).EnglishName + ", " + JSON.parse(body).Country.EnglishName;
-                    let weather_url = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/" + location_key + "?apikey=VrE0nYTPMGbpW5JBj358TJxrsUlSOScr&language=en-us&details=false&metric=true";
+                    let weather_url = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/" + location_key + "?apikey=fY8ASBhh2A5Ycio8dBbi2XOMao4Ep211&language=en-us&details=false&metric=true";
                     request(weather_url, function(error, response, body) {
                         if (!error && response.statusCode == 200) {
                             res.render("dashboard", {
@@ -45,13 +45,13 @@ app.get("/weather", function(req, res) {
         try {
             let location = ip;
             console.log(location);
-            let location_url = "http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=VrE0nYTPMGbpW5JBj358TJxrsUlSOScr&q=" + location + "&language=en-us&details=false"
+            let location_url = "http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=fY8ASBhh2A5Ycio8dBbi2XOMao4Ep211&q=" + location + "&language=en-us&details=false"
             request(location_url, function(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     let random_playlist = Math.floor(Math.random() * 4) + 1;
                     let location_key = JSON.parse(body).Key;
                     let location_name = JSON.parse(body).EnglishName + ", " + JSON.parse(body).Country.EnglishName;
-                    let weather_url = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/" + location_key + "?apikey=VrE0nYTPMGbpW5JBj358TJxrsUlSOScr&language=en-us&details=false&metric=true";
+                    let weather_url = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/" + location_key + "?apikey=fY8ASBhh2A5Ycio8dBbi2XOMao4Ep211&language=en-us&details=false&metric=true";
                     request(weather_url, function(error, response, body) {
                         if (!error && response.statusCode == 200) {
                             res.render("weather", {
@@ -74,13 +74,13 @@ app.get("/music", function(req, res) {
         try {
             let location = ip;
             console.log(location);
-            let location_url = "http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=VrE0nYTPMGbpW5JBj358TJxrsUlSOScr&q=" + location + "&language=en-us&details=false"
+            let location_url = "http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=fY8ASBhh2A5Ycio8dBbi2XOMao4Ep211&q=" + location + "&language=en-us&details=false"
             request(location_url, function(error, response, body) {
                 if (!error && response.statusCode == 200) {
                     let random_playlist = Math.floor(Math.random() * 4) + 1;
                     let location_key = JSON.parse(body).Key;
                     let location_name = JSON.parse(body).EnglishName + ", " + JSON.parse(body).Country.EnglishName;
-                    let weather_url = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/" + location_key + "?apikey=VrE0nYTPMGbpW5JBj358TJxrsUlSOScr&language=en-us&details=false&metric=true";
+                    let weather_url = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/" + location_key + "?apikey=fY8ASBhh2A5Ycio8dBbi2XOMao4Ep211&language=en-us&details=false&metric=true";
                     request(weather_url, function(error, response, body) {
                         if (!error && response.statusCode == 200) {
                             res.render("music", {
